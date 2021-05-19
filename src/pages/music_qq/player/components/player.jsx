@@ -1,18 +1,9 @@
 import React from 'react';
 import { Progress, Spin } from "shineout";
 
-
-
-let audio = new Audio();
 class MusicPlayerQQ extends React.Component {
-    init(url) {
-        audio.autoplay = true;
-        audio.src = url
-    }
 
-    componentDidUpdate() {
-        this.init(this.props.playerInfo.url)
-    }
+
     // componentWillReceiveProps() {
     // }
 
@@ -22,8 +13,8 @@ class MusicPlayerQQ extends React.Component {
                 {
                     <div className="poly-music-player">
                         <div className="poly-music-player-info">
-                            <img height="80px" width="90px" src={`https://y.gtimg.cn/music/photo_new/T002R300x300M000${this.props.playerInfo.album&&this.props.playerInfo.album.mid}.jpg`}
-                                alt=""  />
+                            <img height="80px" width="90px" src={`https://y.gtimg.cn/music/photo_new/T002R300x300M000${this.props.playerInfo.album && this.props.playerInfo.album.mid}.jpg`}
+                                alt="" />
                             <div className="poly-music-player-info-right">
                                 <div className="song-info">
                                     <div className="song-name">{this.props.playerInfo.name}</div>
@@ -41,7 +32,6 @@ class MusicPlayerQQ extends React.Component {
                     </div>
                 }
             </Spin>
-
         )
     }
 }

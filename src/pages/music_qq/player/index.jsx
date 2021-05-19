@@ -13,10 +13,10 @@ class Player extends Component {
 
   state = {
     playList: [],
-    isPlaying:null,
+    isPlaying: null,
     loading: true,
     player: {
-      songInfo:null,
+      songInfo: null,
       loading: false,
       url: ''
     }
@@ -30,12 +30,16 @@ class Player extends Component {
       })
     })
   }
-  
+
+
   componentDidMount() {
     this.getPlayList()
   }
+  componentDidUpdate(){
+    this.PlayList.scrollTop = 60 * window.currentIndex
+  }
 
-  setPlayUrl = (songInfo,index) => {
+  setPlayUrl = (songInfo, index) => {
     this.setState({
       player: {
         ...songInfo,
@@ -51,16 +55,22 @@ class Player extends Component {
           url: res.url,
           loading: false
         }
+      }, () => {
+        window.audio.src = res.url
+        window.audio.autoplay = true;
+        
       })
     })
   }
-
+  scrollToAnchor = (anchorName) => {
+    
+  }
   render() {
     return (
       <Fragment>
-        <MusicPlayerQQ playerInfo={this.state.player}  />
+        <MusicPlayerQQ playerInfo={this.state.player} />
         <div className="poly-music-content">
-          <div className="poly-music-content-left">
+          <div  className="poly-music-content-left"  ref={(ref)=>{this.PlayList = ref}}>
             <PlayList isPlaying={this.state.isPlaying} setPlayUrl={this.setPlayUrl} loading={this.state.loading} playList={this.state.playList}></PlayList>
           </div>
           <div className="poly-music-content-right">
