@@ -1,0 +1,37 @@
+//#主色
+$Brand:#6190E8;
+
+//辅助色
+$Positive:#13CE66;
+$Negative:#FF4949;
+$Warning:#FFC82C;
+$Info:#78A4FA;
+
+//次辅助颜色
+$Roof:#C2ABC7;
+$Curtain:#F0D0D5;
+$Door:#F1E4ED;
+$Wall:#EEF0F0;
+
+//中性色
+//标题
+$Header:#2C405A;
+//正文字体 - 黑
+$FontBlack:#3F536E;
+//正文字体 - 灰
+$FontGray:#8DABC4;
+//图标
+$Icon:#A8C6DF;
+//边框
+$Border:#C5D9E8;
+//背景色 - 浅蓝
+$BgcBlue:#ECF5FD;
+//背景色 - 米白
+$BgcWhite:#FAFBFC;
+
+//
+
+
+.box-sd{
+  box-shadow: 0 10px 60px 0 rgba(29,29,31,.07); 
+}

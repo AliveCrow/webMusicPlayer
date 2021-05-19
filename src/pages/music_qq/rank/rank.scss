@@ -1,0 +1,37 @@
+.rank-group{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  gap: 10px;
+  span{
+    min-width: 70px;
+  }
+}
+.rank-list-title{
+  font-size: 1.4rem;
+  text-align:center;
+  margin: 20px;
+}
+
+
+.base-item{
+  cursor: pointer;
+  &:hover{
+    .base-item-song-name{
+      color: $Positive;
+    }
+  }
+
+}
+.base-item-song-name{
+  transition:all .25s ease;
+
+}
+
+.plus,.play-circle{
+  transition:all .25s ease;
+  &:hover{
+    color: $Positive;
+    transform: scale(1.1);
+  }
+}

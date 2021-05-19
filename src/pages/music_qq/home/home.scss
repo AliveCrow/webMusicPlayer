@@ -1,0 +1,129 @@
+@keyframes indicator-rise {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+div.indicator {
+  text-align: center;
+  user-select: none;
+  float: left;
+}
+div.indicator-item {
+  margin-right: 10px;
+  float: left;
+  width: 36px;
+  height: 30px;
+  font-size: 20px;
+  color: #ffffff50;
+  cursor: pointer;
+}
+div.indicator-item.active {
+  color: #fff;
+}
+div.indicator .indicator-progress {
+  position: relative;
+}
+div.indicator .indicator-progress > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+div.indicator .indicator-progress .bg {
+  width: 100%;
+  background: #ffffff50;
+}
+div.indicator .indicator-progress .fg {
+  width: 0;
+  background: #ffffff;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 520px;
+  text-align: center;
+}
+
+.fg {
+  background-color: $Brand !important;
+}
+
+.area-list {
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      cursor: default;
+    }
+    margin-bottom: 20px;
+    li {
+      padding-left: 20px;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    .li-active {
+      color: $Brand;
+    }
+  }
+}
+
+.new-song-list {
+  text-align: center;
+  min-width: calc(250px * 5);
+  &-gard-group {
+    .so-card-group-grid {
+      place-items: center;
+    }
+  }
+  .song-detail {
+    .song-img {
+      img {
+        height: 86px;
+        width: 86px;
+        transition: all 0.35s ease;
+
+      }
+      width: 86px;
+      height: 86px;
+      overflow: hidden;
+      flex-shrink: 0;
+        }
+    .song-detail-list {
+      margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 0.7rem;
+      .song-name {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-align: left;
+      }
+      .song-duration {
+        align-self: end;
+      }
+    }
+    width: 230px;
+    text-align: left;
+    display: inline-flex;
+    justify-content: start;
+    margin: 10px;
+    cursor: default;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+      span {
+        color: $FontGray;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.qq-music {
+  display: flex;
+  height: 100%;
+  a {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  .poly-music-sidebar {
+    min-width: 200px;
+    min-height: calc(300px - 64px);
+    display: inline-block;
+    margin: 32px 0;
+    padding: 0;
+    color: $FontBlack;
+    background-color: #fff;
+    border-right: 1px solid #ececec;
+    z-index: 99;
+  }
+  .poly-music-main {
+    width: 100%;  
+    min-width: 1250px;
+  }
+  &-left-nav-title {
+    padding: 0 24px 8px;
+    color: $FontGray;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &-left-nav-li {
+    position: relative;
+    &:hover {
+      background-color: rgba(236, 242, 252, 0.4);
+      a {
+        color: $Brand;
+      }
+    }
+  }
+  &-nav-text {
+    display: block;
+    position: relative;
+    padding: 8px 24px;
+    color: $FontBlack;
+    font-weight: normal;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  &-active-nav {
+    background-color: rgba(236, 242, 252, 0.5);
+    color: $FontBlack !important;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: $Brand;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      box-shadow: 1px 0 12px 0 $Brand;
+    }
+  }
+}
